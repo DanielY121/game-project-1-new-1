@@ -1,5 +1,48 @@
+input.onGesture(Gesture.TiltLeft, function () {
+    basic.showString("Merry Christmas and Happy New Year")
+    basic.showString("Thank you for supporting this game ")
+    basic.showString("Made by DanielY121")
+})
 input.onButtonPressed(Button.A, function () {
     Player.change(LedSpriteProperty.X, -1)
+    music.playMelody("C5 - - - - - - - ", 500)
+})
+input.onGesture(Gesture.Shake, function () {
+    Enemy.delete()
+    Player.delete()
+    music.playMelody("A B C5 D C F A F ", 500)
+    for (let index = 0; index < 4; index++) {
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            # # . # #
+            # . . . #
+            . # # # .
+            `)
+        basic.showLeds(`
+            . # # # .
+            # # . # #
+            # . . . #
+            # . . . #
+            . # # # .
+            `)
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            # # . # #
+            # . . . #
+            . # # # .
+            `)
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            # . . . #
+            # # . # #
+            . # # # .
+            `)
+    }
+    Enemy = game.createSprite(0, 0)
+    Player = game.createSprite(2, 4)
 })
 input.onButtonPressed(Button.AB, function () {
     Bullet = game.createSprite(Player.get(LedSpriteProperty.X), 3)
@@ -26,6 +69,10 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     Player.change(LedSpriteProperty.X, 1)
+    music.playMelody("C5 - - - - - - - ", 500)
+})
+input.onGesture(Gesture.TiltRight, function () {
+    basic.clearScreen()
 })
 let Enemy_speed = 0
 let sprite = 0
