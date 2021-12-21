@@ -59,6 +59,7 @@ basic.forever(function () {
                     music.playMelody("E B C5 A B G A F ", 300)
                     music.playMelody("E - - - - - - - ", 103)
                     basic.showString("Made by DanielY121")
+                    basic.showString("Thank you for supporting this game.")
                     basic.pause(250)
                     game.gameOver()
                 }
@@ -89,6 +90,7 @@ basic.forever(function () {
                     music.playMelody("E B C5 A B G A F ", 300)
                     music.playMelody("E - - - - - - - ", 103)
                     basic.showString("Made by DanielY121")
+                    basic.showString("Thank you for supporting this game.")
                     basic.pause(250)
                     game.gameOver()
                 }
