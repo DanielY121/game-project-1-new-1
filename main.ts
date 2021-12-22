@@ -116,6 +116,7 @@ let Bullet_from_enemy: game.LedSprite = null
 let Bullet: game.LedSprite = null
 let Enemy: game.LedSprite = null
 let Player: game.LedSprite = null
+music.playMelody("F G A B A G F D ", 500)
 Player = game.createSprite(2, 4)
 Enemy = game.createSprite(0, 0)
 basic.forever(function () {
@@ -139,6 +140,8 @@ basic.forever(function () {
                 Bullet_from_enemy.change(LedSpriteProperty.Y, 1)
                 basic.pause(250)
                 if (Bullet_from_enemy.isTouching(Player)) {
+                    Player.delete()
+                    Enemy.delete()
                     music.playMelody("E B C5 A B G A F ", 300)
                     music.playMelody("E - - - - - - - ", 103)
                     basic.showIcon(IconNames.SmallHeart)
@@ -174,6 +177,8 @@ basic.forever(function () {
                 Bullet_from_enemy.change(LedSpriteProperty.Y, 1)
                 basic.pause(250)
                 if (Bullet_from_enemy.isTouching(Player)) {
+                    Player.delete()
+                    Enemy.delete()
                     music.playMelody("E B C5 A B G A F ", 300)
                     music.playMelody("E - - - - - - - ", 103)
                     basic.showIcon(IconNames.SmallHeart)
