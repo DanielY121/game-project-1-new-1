@@ -11,6 +11,7 @@ input.onGesture(Gesture.Shake, function () {
     Enemy.delete()
     Player.delete()
     music.playMelody("A B C5 D C F A F ", 500)
+    music.playMelody("C5 B A G A B C5 D ", 500)
     for (let index = 0; index < 4; index++) {
         basic.showLeds(`
             . # # # .
