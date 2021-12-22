@@ -22,4 +22,34 @@
         # . . . # 
         # # . # # 
         . # # # .
-        `</field></block></next></block></next></block></next></block></statement><next><block type="variables_set" id="7POGH2t?B=N`{uOT=u}y"><field name="VAR" id="N_`zPJn,6b#j!9~qdQ0P">Enemy</field><value name="VALUE"><shadow type="math_number" id="hL(dyy}Ed|-KGGdns#!/" disabled="true"><field name="NUM">0</field></shadow><block type="game_create_sprite" id="S{35Shs3qRNhUnu$JoY2"><value name="x"><shadow type="math_number" id=",7|}-YM3AG*n_r$yspyb"><field name="NUM">0</field></shadow></value><value name="y"><shadow type="math_number" id=")D}4FH(#7gRBZDPIt=3_"><field name="NUM">0</field></shadow></value></block></value><next><block type="variables_set" id="zBO@a02-EQX^d9J}}3Ii"><field name="VAR" id="8.4=[#_n.4MihvJ[Yi-?">Player</field><value name="VALUE"><shadow type="math_number" id="k#PxUgovJFK@LK!kSr#e" disabled="true"><field name="NUM">0</field></shadow><block type="game_create_sprite" id="tT7;MUF=Pg{cQVlxMzG("><value name="x"><shadow type="math_number" id="|VKh].PKj3s-!$[|.1Vt"><field name="NUM">2</field></shadow></value><value name="y"><shadow type="math_number" id="@UIUxIcbkO1Nu#1]kfe/"><field name="NUM">4</field></shadow></value></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="device_gesture_event" id="QoaDRGGH}hgVYHcMVy|O" x="-479" y="588"><field name="NAME">Gesture.TiltLeft</field><statement name="HANDLER"><block type="device_print_message" id="%qN%Yf/l(QGn_,2u0%,q"><value name="text"><shadow type="text" id="x_oq;P!Bvh12]-twM^!y"><field name="TEXT">Merry Christmas and Happy New Year</field></shadow></value><next><block type="device_print_message" id=",y#6l3z!O/s(fA!zGqh%"><value name="text"><shadow type="text" id="1ti^Wjk~ps.2z~ke8NeQ"><field name="TEXT">Thank you for supporting this game </field></shadow></value><next><block type="device_print_message" id="v+tc20P1dc]O8euR.P/U"><value name="text"><shadow type="text" id="s^Wd)+LR4K=yRBB-5O_|"><field name="TEXT">Made by DanielY121</field></shadow></value></block></next></block></next></block></statement></block></xml>
+        `</field></block></next></block></next></block></next></block></statement><next><block type="variables_set" id="7POGH2t?B=N`{uOT=u}y"><field name="VAR" id="N_`zPJn,6b#j!9~qdQ0P">Enemy</field><value name="VALUE"><shadow type="math_number" id="hL(dyy}Ed|-KGGdns#!/" disabled="true"><field name="NUM">0</field></shadow><block type="game_create_sprite" id="S{35Shs3qRNhUnu$JoY2"><value name="x"><shadow type="math_number" id=",7|}-YM3AG*n_r$yspyb"><field name="NUM">0</field></shadow></value><value name="y"><shadow type="math_number" id=")D}4FH(#7gRBZDPIt=3_"><field name="NUM">0</field></shadow></value></block></value><next><block type="variables_set" id="zBO@a02-EQX^d9J}}3Ii"><field name="VAR" id="8.4=[#_n.4MihvJ[Yi-?">Player</field><value name="VALUE"><shadow type="math_number" id="k#PxUgovJFK@LK!kSr#e" disabled="true"><field name="NUM">0</field></shadow><block type="game_create_sprite" id="tT7;MUF=Pg{cQVlxMzG("><value name="x"><shadow type="math_number" id="|VKh].PKj3s-!$[|.1Vt"><field name="NUM">2</field></shadow></value><value name="y"><shadow type="math_number" id="@UIUxIcbkO1Nu#1]kfe/"><field name="NUM">4</field></shadow></value></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="device_gesture_event" id="QoaDRGGH}hgVYHcMVy|O" x="-479" y="588"><field name="NAME">Gesture.TiltLeft</field><statement name="HANDLER"><block type="device_print_message" id="%qN%Yf/l(QGn_,2u0%,q"><value name="text"><shadow type="text" id="x_oq;P!Bvh12]-twM^!y"><field name="TEXT">Merry Christmas and Happy New Year</field></shadow></value><next><block type="device_show_leds" id="3,=R7LXV9C@|^!5}v9Xo"><field name="LEDS">`
+        . . # . . 
+        . # # # . 
+        # # # # # 
+        . # # # . 
+        . . # . .
+        `</field><next><block type="device_show_leds" id="xx$UB=tHx):p*UBgXzv4"><field name="LEDS">`
+        . . # . . 
+        . # . # . 
+        # . . . # 
+        . # . # . 
+        . . # . .
+        `</field><next><block type="device_show_leds" id="al6?#{6g_9vj8_tGw#i["><field name="LEDS">`
+        . . . . . 
+        . . # . . 
+        . # . # . 
+        . . # . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="wcVZ4glPP`VTb(k@VN@l"><field name="LEDS">`
+        . . # . . 
+        . # . # . 
+        # . . . # 
+        . # . # . 
+        . . # . .
+        `</field><next><block type="device_show_leds" id="K[ApqD~23wU9jMT$`k0V"><field name="LEDS">`
+        . . # . . 
+        . # # # . 
+        # # # # # 
+        . # # # . 
+        . . # . .
+        `</field><next><block type="device_print_message" id=",y#6l3z!O/s(fA!zGqh%"><value name="text"><shadow type="text" id="1ti^Wjk~ps.2z~ke8NeQ"><field name="TEXT">Thank you for supporting this game </field></shadow></value><next><block type="device_print_message" id="v+tc20P1dc]O8euR.P/U"><value name="text"><shadow type="text" id="s^Wd)+LR4K=yRBB-5O_|"><field name="TEXT">Made by DanielY121</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>

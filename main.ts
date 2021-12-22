@@ -1,5 +1,40 @@
 input.onGesture(Gesture.TiltLeft, function () {
     basic.showString("Merry Christmas and Happy New Year")
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . # # # .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . . . #
+        . # . # .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . # . # .
+        . . # . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . . . #
+        . # . # .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . # # # .
+        . . # . .
+        `)
     basic.showString("Thank you for supporting this game ")
     basic.showString("Made by DanielY121")
 })
