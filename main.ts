@@ -107,9 +107,6 @@ input.onButtonPressed(Button.B, function () {
     Player.change(LedSpriteProperty.X, 1)
     music.playMelody("C5 - - - - - - - ", 500)
 })
-input.onGesture(Gesture.TiltRight, function () {
-    basic.clearScreen()
-})
 let Enemy_speed = 0
 let sprite = 0
 let Bullet_from_enemy: game.LedSprite = null
