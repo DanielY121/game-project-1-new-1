@@ -1,5 +1,40 @@
 def on_gesture_tilt_left():
     basic.show_string("Merry Christmas and Happy New Year")
+    basic.show_leds("""
+        . . # . .
+                . # # # .
+                # # # # #
+                . # # # .
+                . . # . .
+    """)
+    basic.show_leds("""
+        . . # . .
+                . # . # .
+                # . . . #
+                . # . # .
+                . . # . .
+    """)
+    basic.show_leds("""
+        . . . . .
+                . . # . .
+                . # . # .
+                . . # . .
+                . . . . .
+    """)
+    basic.show_leds("""
+        . . # . .
+                . # . # .
+                # . . . #
+                . # . # .
+                . . # . .
+    """)
+    basic.show_leds("""
+        . . # . .
+                . # # # .
+                # # # # #
+                . # # # .
+                . . # . .
+    """)
     basic.show_string("Thank you for supporting this game ")
     basic.show_string("Made by DanielY121")
 input.on_gesture(Gesture.TILT_LEFT, on_gesture_tilt_left)
@@ -76,32 +111,71 @@ def on_button_pressed_b():
     music.play_melody("C5 - - - - - - - ", 500)
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
-def on_gesture_tilt_right():
-    basic.clear_screen()
-input.on_gesture(Gesture.TILT_RIGHT, on_gesture_tilt_right)
-
 Enemy_speed = 0
+EF1 = 0
+Enemy_fever_1: game.LedSprite = None
 sprite = 0
 Bullet_from_enemy: game.LedSprite = None
 Bullet: game.LedSprite = None
 Enemy: game.LedSprite = None
 Player: game.LedSprite = None
+music.play_melody("F G A B A G F D ", 500)
 Player = game.create_sprite(2, 4)
 Enemy = game.create_sprite(0, 0)
 
 def on_forever():
-    global sprite, Enemy_speed, Bullet_from_enemy
+    global sprite, Enemy_fever_1, EF1, Enemy_speed, Bullet_from_enemy
     for index3 in range(4):
         sprite = randint(0, 1)
         if sprite == 0:
-            Enemy.change(LedSpriteProperty.X, 1)
-            Enemy_speed = randint(0, 2)
-            if Enemy_speed == 0:
-                basic.pause(100)
-            elif Enemy_speed == 1:
+            if game.score() > 10:
+                Enemy_fever_1 = game.create_sprite(4, 0)
                 basic.pause(250)
+                EF1 = randint(0, 4)
+                if EF1 == 0:
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.create_sprite(0, 0)
+                    basic.pause(250)
+                    if Bullet.is_touching(Enemy_fever_1):
+                        Enemy_fever_1.delete()
+                        game.add_score(1)
+                elif EF1 == 1:
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.create_sprite(1, 0)
+                    basic.pause(250)
+                    if Bullet.is_touching(Enemy_fever_1):
+                        Enemy_fever_1.delete()
+                        game.add_score(1)
+                elif EF1 == 2:
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.create_sprite(2, 0)
+                    basic.pause(250)
+                    if Bullet.is_touching(Enemy_fever_1):
+                        Enemy_fever_1.delete()
+                        game.add_score(1)
+                elif EF1 == 3:
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.create_sprite(3, 0)
+                    basic.pause(250)
+                    if Bullet.is_touching(Enemy_fever_1):
+                        Enemy_fever_1.delete()
+                        game.add_score(1)
+                else:
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.create_sprite(4, 0)
+                    basic.pause(250)
+                    if Bullet.is_touching(Enemy_fever_1):
+                        Enemy_fever_1.delete()
+                        game.add_score(1)
             else:
-                basic.pause(500)
+                Enemy.change(LedSpriteProperty.X, 1)
+                Enemy_speed = randint(0, 2)
+                if Enemy_speed == 0:
+                    basic.pause(100)
+                elif Enemy_speed == 1:
+                    basic.pause(250)
+                else:
+                    basic.pause(500)
         else:
             Bullet_from_enemy = game.create_sprite(Enemy.get(LedSpriteProperty.X), 1)
             basic.pause(500)
@@ -110,6 +184,8 @@ def on_forever():
                 Bullet_from_enemy.change(LedSpriteProperty.Y, 1)
                 basic.pause(250)
                 if Bullet_from_enemy.is_touching(Player):
+                    Player.delete()
+                    Enemy.delete()
                     music.play_melody("E B C5 A B G A F ", 300)
                     music.play_melody("E - - - - - - - ", 103)
                     basic.show_icon(IconNames.SMALL_HEART)
@@ -140,6 +216,8 @@ def on_forever():
                 Bullet_from_enemy.change(LedSpriteProperty.Y, 1)
                 basic.pause(250)
                 if Bullet_from_enemy.is_touching(Player):
+                    Player.delete()
+                    Enemy.delete()
                     music.play_melody("E B C5 A B G A F ", 300)
                     music.play_melody("E - - - - - - - ", 103)
                     basic.show_icon(IconNames.SMALL_HEART)
