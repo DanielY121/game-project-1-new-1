@@ -87,7 +87,9 @@ input.onButtonPressed(Button.AB, function () {
         if (Bullet.isTouching(Enemy)) {
             Enemy.delete()
             Bullet_from_enemy.delete()
+            game.pause()
             music.playMelody("E G F G A F A G ", 296)
+            game.resume()
             game.addScore(1)
             Enemy = game.createSprite(0, 0)
             Player.delete()
@@ -167,16 +169,15 @@ basic.forever(function () {
                         game.addScore(1)
                     }
                 }
+            }
+            Enemy.change(LedSpriteProperty.X, 1)
+            Enemy_speed = randint(0, 2)
+            if (Enemy_speed == 0) {
+                basic.pause(100)
+            } else if (Enemy_speed == 1) {
+                basic.pause(250)
             } else {
-                Enemy.change(LedSpriteProperty.X, 1)
-                Enemy_speed = randint(0, 2)
-                if (Enemy_speed == 0) {
-                    basic.pause(100)
-                } else if (Enemy_speed == 1) {
-                    basic.pause(250)
-                } else {
-                    basic.pause(500)
-                }
+                basic.pause(500)
             }
         } else {
             Bullet_from_enemy = game.createSprite(Enemy.get(LedSpriteProperty.X), 1)
@@ -208,16 +209,53 @@ basic.forever(function () {
         if (sprite == 0) {
             if (game.score() > 10) {
                 Enemy_fever_1 = game.createSprite(4, 0)
-            } else {
-                Enemy.change(LedSpriteProperty.X, -1)
-                Enemy_speed = randint(0, 2)
-                if (Enemy_speed == 0) {
-                    basic.pause(100)
-                } else if (Enemy_speed == 1) {
-                    basic.pause(250)
+                basic.pause(250)
+                EF1 = randint(0, 4)
+                if (EF1 == 0) {
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.createSprite(0, 0)
+                    if (Bullet.isTouching(Enemy_fever_1)) {
+                        Enemy_fever_1.delete()
+                        game.addScore(1)
+                    }
+                } else if (EF1 == 1) {
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.createSprite(1, 0)
+                    if (Bullet.isTouching(Enemy_fever_1)) {
+                        Enemy_fever_1.delete()
+                        game.addScore(1)
+                    }
+                } else if (EF1 == 2) {
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.createSprite(2, 0)
+                    if (Bullet.isTouching(Enemy_fever_1)) {
+                        Enemy_fever_1.delete()
+                        game.addScore(1)
+                    }
+                } else if (EF1 == 3) {
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.createSprite(3, 0)
+                    if (Bullet.isTouching(Enemy_fever_1)) {
+                        Enemy_fever_1.delete()
+                        game.addScore(1)
+                    }
                 } else {
-                    basic.pause(500)
+                    Enemy_fever_1.delete()
+                    Enemy_fever_1 = game.createSprite(4, 0)
+                    if (Bullet.isTouching(Enemy_fever_1)) {
+                        Enemy_fever_1.delete()
+                        game.addScore(1)
+                    }
                 }
+            }
+            Enemy.change(LedSpriteProperty.X, -1)
+            Enemy_speed = randint(0, 2)
+            if (Enemy_speed == 0) {
+                basic.pause(100)
+            } else if (Enemy_speed == 1) {
+                basic.pause(250)
+            } else {
+                basic.pause(500)
             }
         } else {
             Bullet_from_enemy = game.createSprite(Enemy.get(LedSpriteProperty.X), 1)
