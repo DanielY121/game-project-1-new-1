@@ -119,7 +119,7 @@ let Bullet_from_enemy: game.LedSprite = null
 let Bullet: game.LedSprite = null
 let Enemy: game.LedSprite = null
 let Player: game.LedSprite = null
-music.playMelody("G A G F E A D - ", 500)
+music.playMelody("B A F B E C5 E C5 ", 500)
 Player = game.createSprite(2, 4)
 Enemy = game.createSprite(0, 0)
 basic.forever(function () {
