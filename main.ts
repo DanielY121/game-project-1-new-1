@@ -122,7 +122,7 @@ let Player: game.LedSprite = null
 music.playMelody("B A G B E C5 E C5 ", 500)
 Player = game.createSprite(2, 4)
 Enemy = game.createSprite(0, 0)
-loops.everyInterval(600000, function () {
+loops.everyInterval(60000, function () {
     game.addScore(1)
 })
 basic.forever(function () {
