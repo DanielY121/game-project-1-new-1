@@ -40,6 +40,18 @@
         . # . # . 
         . . # . . 
         . . . . .
+        `</field><next><block type="device_show_leds" id="SK`9sfnLd`q4sUlOD$m["><field name="LEDS">`
+        . . . . . 
+        . . # . . 
+        . # # # . 
+        . . # . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="y73K4!:@E[t!{z}PBzPW"><field name="LEDS">`
+        . . . . . 
+        . . # . . 
+        . # . # . 
+        . . # . . 
+        . . . . .
         `</field><next><block type="device_show_leds" id="wcVZ4glPP`VTb(k@VN@l"><field name="LEDS">`
         . . # . . 
         . # . # . 
@@ -52,4 +64,16 @@
         # # # # # 
         . # # # . 
         . . # . .
-        `</field><next><block type="device_print_message" id=",y#6l3z!O/s(fA!zGqh%"><value name="text"><shadow type="text" id="1ti^Wjk~ps.2z~ke8NeQ"><field name="TEXT">Thank you for supporting this game </field></shadow></value><next><block type="device_print_message" id="v+tc20P1dc]O8euR.P/U"><value name="text"><shadow type="text" id="s^Wd)+LR4K=yRBB-5O_|"><field name="TEXT">Made by DanielY121</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>
+        `</field><next><block type="device_show_leds" id="92,8VDkm6JDSA6,#WvtL"><field name="LEDS">`
+        . . # . . 
+        . # . # . 
+        # . . . # 
+        . # . # . 
+        . . # . .
+        `</field><next><block type="device_show_leds" id="wO:qfc)Jt%$t+Lao)9]^"><field name="LEDS">`
+        . . # . . 
+        . # # # . 
+        # # # # # 
+        . # # # . 
+        . . # . .
+        `</field><next><block type="device_print_message" id=",y#6l3z!O/s(fA!zGqh%"><value name="text"><shadow type="text" id="1ti^Wjk~ps.2z~ke8NeQ"><field name="TEXT">Thank you for supporting this game </field></shadow></value><next><block type="device_print_message" id="v+tc20P1dc]O8euR.P/U"><value name="text"><shadow type="text" id="s^Wd)+LR4K=yRBB-5O_|"><field name="TEXT">Made by DanielY121</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>
