@@ -158,48 +158,50 @@ basic.forever(function () {
         sprite = randint(0, 1)
         if (sprite == 0) {
             if (game.score() == 10) {
-                Enemy_fever_1 = game.createSprite(4, 0)
-                basic.pause(250)
-                EF1 = randint(0, 4)
-                if (EF1 == 0) {
-                    Enemy_fever_1.delete()
-                    Enemy_fever_1 = game.createSprite(0, 0)
-                    basic.pause(250)
-                    if (Bullet.isTouching(Enemy_fever_1)) {
-                        Enemy_fever_1.delete()
-                        game.addScore(1)
-                    }
-                } else if (EF1 == 1) {
-                    Enemy_fever_1.delete()
-                    Enemy_fever_1 = game.createSprite(1, 0)
-                    basic.pause(250)
-                    if (Bullet.isTouching(Enemy_fever_1)) {
-                        Enemy_fever_1.delete()
-                        game.addScore(1)
-                    }
-                } else if (EF1 == 2) {
-                    Enemy_fever_1.delete()
-                    Enemy_fever_1 = game.createSprite(2, 0)
-                    basic.pause(250)
-                    if (Bullet.isTouching(Enemy_fever_1)) {
-                        Enemy_fever_1.delete()
-                        game.addScore(1)
-                    }
-                } else if (EF1 == 3) {
-                    Enemy_fever_1.delete()
-                    Enemy_fever_1 = game.createSprite(3, 0)
-                    basic.pause(250)
-                    if (Bullet.isTouching(Enemy_fever_1)) {
-                        Enemy_fever_1.delete()
-                        game.addScore(1)
-                    }
-                } else {
-                    Enemy_fever_1.delete()
+                for (let index = 0; index < 5; index++) {
                     Enemy_fever_1 = game.createSprite(4, 0)
                     basic.pause(250)
-                    if (Bullet.isTouching(Enemy_fever_1)) {
+                    EF1 = randint(0, 4)
+                    if (EF1 == 0) {
                         Enemy_fever_1.delete()
-                        game.addScore(1)
+                        Enemy_fever_1 = game.createSprite(0, 0)
+                        basic.pause(250)
+                        if (Bullet.isTouching(Enemy_fever_1)) {
+                            Enemy_fever_1.delete()
+                            game.addScore(1)
+                        }
+                    } else if (EF1 == 1) {
+                        Enemy_fever_1.delete()
+                        Enemy_fever_1 = game.createSprite(1, 0)
+                        basic.pause(250)
+                        if (Bullet.isTouching(Enemy_fever_1)) {
+                            Enemy_fever_1.delete()
+                            game.addScore(1)
+                        }
+                    } else if (EF1 == 2) {
+                        Enemy_fever_1.delete()
+                        Enemy_fever_1 = game.createSprite(2, 0)
+                        basic.pause(250)
+                        if (Bullet.isTouching(Enemy_fever_1)) {
+                            Enemy_fever_1.delete()
+                            game.addScore(1)
+                        }
+                    } else if (EF1 == 3) {
+                        Enemy_fever_1.delete()
+                        Enemy_fever_1 = game.createSprite(3, 0)
+                        basic.pause(250)
+                        if (Bullet.isTouching(Enemy_fever_1)) {
+                            Enemy_fever_1.delete()
+                            game.addScore(1)
+                        }
+                    } else {
+                        Enemy_fever_1.delete()
+                        Enemy_fever_1 = game.createSprite(4, 0)
+                        basic.pause(250)
+                        if (Bullet.isTouching(Enemy_fever_1)) {
+                            Enemy_fever_1.delete()
+                            game.addScore(1)
+                        }
                     }
                 }
             }
