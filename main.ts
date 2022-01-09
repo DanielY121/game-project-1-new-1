@@ -1,4 +1,6 @@
 input.onGesture(Gesture.TiltLeft, function () {
+    Player.delete()
+    Enemy.delete()
     basic.showString("For player")
     basic.showLeds(`
         . # # # .
@@ -11,6 +13,8 @@ input.onGesture(Gesture.TiltLeft, function () {
     basic.showString("Chinese New Year")
     basic.showString("Thank you for supporting this game ")
     basic.showString("Made by DanielY121")
+    Player = game.createSprite(2, 4)
+    Enemy = game.createSprite(0, 0)
 })
 input.onButtonPressed(Button.A, function () {
     Player.change(LedSpriteProperty.X, -1)

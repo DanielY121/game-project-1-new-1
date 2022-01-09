@@ -1,68 +1,14 @@
 def on_gesture_tilt_left():
-    basic.show_string("Merry Christmas and Happy New Year")
+    basic.show_string("For player")
     basic.show_leds("""
-        . . # . .
+        . # # # .
                 . # # # .
-                # # # # #
                 . # # # .
-                . . # . .
-    """)
-    basic.show_leds("""
-        . . # . .
-                . # . # .
-                # . . . #
-                . # . # .
-                . . # . .
-    """)
-    basic.show_leds("""
-        . . . . .
-                . . # . .
-                . # . # .
-                . . # . .
-                . . . . .
-    """)
-    basic.show_leds("""
-        . . . . .
-                . . # . .
                 . # # # .
-                . . # . .
-                . . . . .
-    """)
-    basic.show_leds("""
-        . . . . .
-                . . # . .
-                . # . # .
-                . . # . .
-                . . . . .
-    """)
-    basic.show_leds("""
-        . . # . .
-                . # . # .
-                # . . . #
-                . # . # .
-                . . # . .
-    """)
-    basic.show_leds("""
-        . . # . .
                 . # # # .
-                # # # # #
-                . # # # .
-                . . # . .
     """)
-    basic.show_leds("""
-        . . # . .
-                . # . # .
-                # . . . #
-                . # . # .
-                . . # . .
-    """)
-    basic.show_leds("""
-        . . # . .
-                . # # # .
-                # # # # #
-                . # # # .
-                . . # . .
-    """)
+    basic.show_string("Red pocket ")
+    basic.show_string("Chinese New Year")
     basic.show_string("Thank you for supporting this game ")
     basic.show_string("Made by DanielY121")
 input.on_gesture(Gesture.TILT_LEFT, on_gesture_tilt_left)
@@ -152,13 +98,6 @@ Bullet: game.LedSprite = None
 Enemy: game.LedSprite = None
 Player: game.LedSprite = None
 music.play_melody("B A G B E C5 E C5 ", 500)
-basic.show_number(3)
-basic.pause(1000)
-basic.show_number(2)
-basic.pause(1000)
-basic.show_number(1)
-basic.pause(1000)
-basic.show_string("Start")
 Player = game.create_sprite(2, 4)
 Enemy = game.create_sprite(0, 0)
 
