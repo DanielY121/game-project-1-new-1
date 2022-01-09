@@ -94,13 +94,6 @@ let Bullet: game.LedSprite = null
 let Enemy: game.LedSprite = null
 let Player: game.LedSprite = null
 music.playMelody("B A G B E C5 E C5 ", 500)
-basic.showNumber(3)
-basic.pause(1000)
-basic.showNumber(2)
-basic.pause(1000)
-basic.showNumber(1)
-basic.pause(1000)
-basic.showString("Start")
 Player = game.createSprite(2, 4)
 Enemy = game.createSprite(0, 0)
 loops.everyInterval(60000, function () {
